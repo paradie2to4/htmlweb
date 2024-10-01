@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planning Tools</title>
+ 
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: linear-gradient(to bottom, rgba(20, 1, 17, 0.8), rgba(128, 129, 130, 0.8)), url(raimond-klavins-xAqrT-279UA-unsplash.jpg);
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(176, 23, 145, 0.1);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+    margin-bottom: 0;
+    background-color: #ccc;
+    height: calc(100vh -20px);
+  }
+  
+  section {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  /* Updated button styles */
+button {
+  padding: 10px 20px;
+  background-image: linear-gradient(to bottom, rgba(18, 47, 162, 0.8), rgba(9, 86, 172, 0.5)), url('header-background.jpg');
+    background-size: cover;/* Make the background transparent */
+  color: #fff; /* Text color */
+  border: none;
+  background-size: cover;; /* Add border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smoother hover effect */
+}
+
+button:hover {
+  background-color: #3498db; /* Change background color on hover */
+  
+}
+
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  footer {
+    background: linear-gradient(to bottom, rgba(20, 1, 17, 0.8), rgba(128, 129, 130, 0.8)), url(raimond-klavins-xAqrT-279UA-unsplash.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 ;
+  }
+  
+  .trip-planning-tools {
+    background-image:  url('raimond-klavins-xAqrT-279UA-unsplash.jpg');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff; /* Adjust text color for better readability */
+  }
+
+  /* Styling checkboxes */
+.packing-checklist input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  .packing-checklist input[type="checkbox"] + label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  /* Customize checkbox appearance */
+  .packing-checklist input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+  
+  /* Checkmark symbol */
+  .packing-checklist input[type="checkbox"]:checked + label::before {
+    content: "\2713"; /* Unicode checkmark symbol */
+    font-size: 16px;
+    color: #3498db; /* Blue color */
+    text-align: center;
+    line-height: 20px;
+  }
+  /* Styling input fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(179, 164, 176, 0.8), rgba(128, 129, 130, 0.8));
+    background-size: cover;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  input[type="text"]:hover{
+   background-color: #042f4b;
+   opacity: 0.7;
+   border:#042f4b ;
+  }
+  /* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+.trip-planning-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+  .trip-planning-tools {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .trip-planning-tools {
+    align-items: center;
+  }
+}
+
+/* For desktop screens */
+@media only screen and (min-width: 992px) {
+  .trip-planning-tools {
+    align-items: center;
+  }
+  
+}
+.accommodation-section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.accommodation-options {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.accommodation-item {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgba(249, 248, 249, 0.8), rgba(96, 130, 162, 0.8));
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+}
+
+.accommodation-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.accommodation-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.accommodation-item p {
+  margin: 5px 0;
+}
+
+.accommodation-item a {
+  display: inline-block;
+  padding: 5px ;
+
+}
+/* Additional CSS for Adding Depth to .emma Button */
+
+.emma {
+  background-image: linear-gradient(to bottom, rgb(62, 7, 62),  rgb(120, 54, 120)), url('header-background.jpg');
+    background-size: cover;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Add transition for smoother effect */
+}
+
+.emma:hover {
+  background-color: rgb(81, 67, 81); /* Darken the background color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover for more depth */
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Trip Planning Tools</h1>
+  </header>
+  <main>
+    <div class="trip-planning-tools">
+   
+        <section class="itinerary">
+            <h2>Itinerary Builder</h2>
+            <form>
+              <label for="destination">Destination:</label>
+              <input type="text" id="destination" name="destination" placeholder="Enter your destination">
+              <label for="dates">Dates:</label>
+              <input type="text" id="dates" name="dates" placeholder="Enter the dates">
+              <button class="destination-button" type="submit">Add to Itinerary</button>
+            </form>
+            <!-- Itinerary display goes here -->
+          </section>
+          <section class="budget">
+            <h2>Budget Calculator</h2>
+            <form>
+              <label for="total-budget">Total Budget:</label>
+              <input type="text" id="total-budget" name="total-budget" placeholder="Enter the total budget">
+              <label for="expenses">Expenses:</label>
+              <input type="text" id="expenses" name="expenses" placeholder="Enter your expenses">
+              <button class="budget-button" type="submit">Calculate</button>
+            </form>
+            
+          </section>
+          
+          <section class="packing-checklist">
+            <h2>Packing Checklist</h2>
+            <ul>
+              <li><input type="checkbox" id="hiking-boots"><label for="hiking-boots">Hiking boots</label></li>
+              <li><input type="checkbox" id="sunscreen"><label for="sunscreen">Sunscreen</label></li>
+              <li><input type="checkbox" id="swimsuit"><label for="swimsuit">Swimsuit</label></li>
+              <li><input type="checkbox" id="passport"><label for="passport">Passport</label></li>
+              <li><input type="checkbox" id="first-aid-kit"><label for="first-aid-kit">First aid kit</label></li>
+            
+            </ul>
+          </section>
+          
+</div>
+  
+  <div class="accommodation-section">
+    <h2>Accommodation</h2>
+    <div class="accommodation-options">
+        <div class="accommodation-item" style="background-color: white;">
+            <img src="hotel1.jpg" alt="Hotel 1" height="160px">
+            <h3>Ritz-Carlton</h3>
+            <p><b>Location:</b> Paris,France</p>
+            <p><b>Price:</b> $1500/night</p>
+            <button  class="emma" type="submit"><a href="#">Book Now</a></button>
+        </div>
+        <div class="accommodation-item" style="background-color: white;">
+            <img src="hotel2.jpeg" alt="Hotel 2"height="160px" >
+            <h3>Grand Legacy Hotel</h3>
+            <p><b>Location:</b> Kigali, Rwanda</p>
+            <p><b>Price:</b> $1000/night</p>
+        <button class="emma">    <a href="#">Book Now</a></button>
+        </div>
+        <div class="accommodation-item" style="background-color: white;">
+          <img src="hotel3.jpeg" alt="Hotel 2"height="160px" >
+          <h3>Burj Al Arab</h3>
+          <p><b>Location:</b>Dubai, UAE</p>
+          <p><b>Price:</b> $1000/night</p>
+          <button class="emma">    <a href="#">Book Now</a></button>
+      </div>
+      <div class="accommodation-item" style="background-color: white;">
+        <img src="hotel4.jpeg" alt="Hotel 2"height="160px" >
+        <h3> Plaza Hotel</h3>
+        <p><b>Location:</b> New York City, USA</p>
+        <p><b>Price:</b> $1000/night</p>
+        <button class="emma">    <a href="#">Book Now</a></button>
+    </div>
+    <div class="accommodation-item" style="background-color: white;">
+      <img src="hotel5.jpeg" alt="Hotel 2"height="160px" >
+      <h3>Hotel de Russie</h3>
+      <p><b>Location:</b> Rome , Italy</p>
+      <p><b>Price:</b> $1000/night</p>
+      <button class="emma">    <a href="#">Book Now</a></button>
+  </div>
+  <div class="accommodation-item" style="background-color: white;">
+    <img src="hotel6.jpeg" alt="Hotel 2"height="160px" >
+    <h3> Savoy Hotel</h3>
+    <p><b>Location:</b> London, UK</p>
+    <p><b>Price:</b> $1000/night</p>
+    <button class="emma">    <a href="#">Book Now</a></button>
+</div>
+    </div>
+</div>
+</main>
+  <footer>
+    <p>&copy; 2024 Adventure Travel</p>
+  </footer>
+</body>
+</html>

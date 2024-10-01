@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Travel</title>
+  <style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .search-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #searchInput {
+    padding: 15px;
+    width: 300px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+  }
+  
+  #searchButton {
+    padding: 15px 30px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  #searchButton:hover {
+    background-color: #219d54;
+  }
+  
+  .featured-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+  main{
+    background-color: rgb(231, 217, 217);
+
+  }
+  
+  .destination {
+    width: 300px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(90, 23, 64, 0.1);
+    overflow: hidden;
+  }
+  
+  .destination img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: #9b6184;
+    
+  }
+  
+  .destination-content {
+    padding: 20px;
+  }
+  
+  .destination h2 {
+    margin-top: 0;
+  }
+  
+  footer {
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0 0 10px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #3b7aa6;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 36px;
+    }
+  
+    .search-container {
+      margin-bottom: 30px;
+    }
+  
+    #searchInput {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    #searchButton {
+      width: 100%;
+      margin-top: 20px; /* Increased space */
+    }
+  
+    .featured-destinations {
+      justify-content: center;
+    }
+  
+    .destination {
+      width: 90%;
+      max-width: 400px;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(232, 222, 222, 0.5)), url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    outline: none;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b2c43;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #1a384d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.featured-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destination {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.destination p {
+    font-size: 16px;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer button {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(232, 222, 222, 0.5)), url('header-background.jpg');
+    background-size: cover;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b2c43;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+footer button:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(232, 222, 222, 0.5)), url('header-background.jpg');
+  background-size: cover;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 36px;
+  }
+
+  header p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .search-container {
+    margin-bottom: 20px;
+  }
+
+  #searchInput {
+    width: calc(100% - 250px);
+    margin-right: 0;
+  }
+
+  #searchButton {
+    width: calc(100% - 225px);
+    margin-top: 20px;
+  }
+
+  .destination {
+    width: calc(50% - 40px);
+    margin: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Your Next Adventure</h1>
+    <p>Discover Your Dream Destination</p>
+  </header>
+  <main><br>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Enter a destination or activity...">
+      <button id="searchButton">Explore</button>
+    </div>
+    <section class="featured-destinations">
+        <div class="destination">
+          <img src="web3.jpg" height="200px">
+          <p>Uncover the mysteries of the ancient Inca civilization amidst the breathtaking Andean scenery.</p>
+        </div>
+        <div class="destination">
+          <img src="web2.jpeg" height="200px" >
+          <p>Embark on an unforgettable safari adventure and witness the awe-inspiring wildlife of the African savannah.</p>
+        </div>
+        <div class="destination">
+          <img src="Website.jpeg" height="200px">
+          <p>Dive into the mesmerizing world beneath the waves and explore the wonders of the largest coral reef system on Earth.</p>
+        </div>
+        <div class="destination">
+          <img src="web4.jpeg" height="200px">
+          <p>Immerse yourself in the pristine beauty of the Canadian Rockies and experience unparalleled outdoor adventures.</p>
+        </div>
+        <div class="destination">
+            <img src="rwanda.jpeg" height="200px">
+            <p>Immerse yourself in the pristine beauty of the land of a thousand hills and experience unparalleled outdoor adventures.</p>
+          </div>
+          <div class="destination">
+            <img src="machu picchu.jpeg"  height="200px">
+            <p>Uncover the mysteries of the ancient Inca civilization amidst the breathtaking Andean scenery.</p>
+          </div>
+      </section>
+  </main>
+  <footer>
+    <p>Connect With Us</p>
+    <button>Sign Up</button>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>
